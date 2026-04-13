@@ -10,7 +10,7 @@ RUN bun install
 
 COPY apps/frontend ./apps/frontend
 COPY packages/shared ./packages/shared
-
+COPY apps/frontend/.env ./apps/frontend/.env
 WORKDIR /app/apps/frontend
 
 RUN bun run build

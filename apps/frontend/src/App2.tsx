@@ -17,7 +17,7 @@ export default function App() {
 
   const loadUsers = async () => {
     try {
-      const res = await fetch("http://localhost:3000/users")
+      const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/users?key=learn`)
       const data: ApiResponse<User[]> = await res.json()
 
       // REVISI: Gunakan optional chaining dan fallback array kosong
